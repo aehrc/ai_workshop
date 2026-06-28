@@ -1,0 +1,13 @@
+torch>=2.3
+torchvision>=0.18
+torchaudio>=2.3
+jupyter>=1.0
+ipykernel>=6.0
+matplotlib>=3.8
+numpy>=1.26
+pandas>=2.0
+scikit-learn>=1.4
+tqdm>=4.66
+transformers>=4.40
+datasets>=2.19
+accelerate>=0.30
