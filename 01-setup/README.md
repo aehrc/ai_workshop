@@ -1,20 +1,18 @@
 # 01 - Setup
 
-## Goal
+In this session, we aim to:
 
-By the end of this session, you should be able to:
-
-- install Python
-- install VS Code
-- install Git
-- clone the workshop repository from GitHub
-- install the VS Code Python and Jupyter extensions
-- open this repository in VS Code
-- create and activate a Python virtual environment
-- install the workshop packages
-- run a Python script
-- run a notebook
-- identify whether PyTorch sees CPU, Apple MPS, or CUDA
+- Install Python
+- Install VS Code
+- Install Git
+- Clone the workshop repository from GitHub
+- Install the VS Code Python and Jupyter extensions
+- Open this repository in VS Code
+- Create and activate a Python virtual environment
+- Install the workshop packages
+- Run a Python script
+- Run a notebook
+- Identify whether PyTorch sees CPU, Apple MPS, or CUDA
 
 ## 1. Install Python
 
