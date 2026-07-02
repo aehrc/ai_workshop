@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import os
 import platform
 import sys
 
@@ -23,11 +24,13 @@ def main() -> None:
     print(f"Executable: {sys.executable}")
     print()
 
-    python_ok = sys.version_info >= (3, 10)
-    print_check("Python version is 3.10 or newer", python_ok)
+    python_ok = sys.version_info >= (3, 12)
+    print_check("Python version is 3.12 or newer", python_ok)
 
-    in_venv = sys.prefix != sys.base_prefix
-    print_check("Virtual environment is active", in_venv)
+    in_codespaces = os.environ.get("CODESPACES") == "true"
+    codespace_name = os.environ.get("CODESPACE_NAME", "")
+    detail = codespace_name if codespace_name else "CODESPACES=true"
+    print_check("Running in GitHub Codespaces", in_codespaces, detail if in_codespaces else "")
     print()
 
     packages = [
@@ -53,7 +56,7 @@ def main() -> None:
 
     if not package_available("torch"):
         print("[WARN] PyTorch is not installed, so device detection was skipped.")
-        print("Install dependencies with: python -m pip install -r requirements.txt")
+        print("Wait for Codespaces setup to finish, or run: python -m pip install -r requirements.txt")
         return
 
     import torch

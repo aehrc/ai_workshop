@@ -18,7 +18,7 @@ By the end of this session, participants should be able to use Hugging Face toke
 1. Load a tokenizer.
 2. Tokenize text and inspect token IDs.
 3. Load a small pretrained model.
-4. Run inference locally.
+4. Run inference in the Codespace.
 5. Load a small dataset.
 6. Understand model cards and hardware expectations.
 

@@ -4,7 +4,7 @@
 
 By the end of this session, participants should be able to run and explain a basic PyTorch training loop.
 
-This lesson uses the Kaggle MNIST MLP notebook only as inspiration. The workshop implementation should run locally with PyTorch and `torchvision.datasets.MNIST`.
+This lesson uses the Kaggle MNIST MLP notebook only as inspiration. The workshop implementation runs in Codespaces with PyTorch and `torchvision.datasets.MNIST`.
 
 ## Preparation
 
@@ -15,7 +15,7 @@ Review:
 
 ## Live Session Outline
 
-1. Load MNIST locally with `torchvision`.
+1. Load MNIST in the Codespace with `torchvision`.
 2. Build a small multilayer perceptron.
 3. Define a loss function and optimizer.
 4. Run the training loop.

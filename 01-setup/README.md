@@ -2,229 +2,51 @@
 
 In this session, we aim to:
 
-- Install Python
-- Install VS Code
-- Install Git
-- Clone the workshop repository from GitHub
-- Install the VS Code Python and Jupyter extensions
-- Open this repository in VS Code
-- Create and activate a Python virtual environment
-- Install the workshop packages
+- Create a GitHub Codespace for the workshop repository
+- Use browser-based VS Code
+- Wait for the dev container to install Python packages
+- Open a terminal in Codespaces
 - Run a Python script
 - Run a notebook
-- Identify whether PyTorch sees CPU, Apple MPS, or CUDA
+- Confirm PyTorch is available on the Codespaces CPU environment
 
-## 1. Install Python
+## 1. Sign In To GitHub
 
-Install Python from:
+Open:
 
-https://www.python.org/downloads/
+https://github.com/
 
-Use Python 3.12 for this workshop. It is stable and well supported by the packages we will use.
+Sign in with your GitHub account.
 
-### Windows
+## 2. Open The Workshop Repository
 
-When running the Python installer, tick:
+Open the workshop repository page:
+
+https://github.com/aehrc/ai_workshop
+
+## 3. Create A Codespace
+
+On the repository page:
+
+1. Select `Code`.
+2. Select the `Codespaces` tab.
+3. Select `Create codespace`.
+
+GitHub will open browser-based VS Code. The first startup can take several minutes because the workshop packages are installed automatically.
+
+Wait until the setup command has finished before running the first script.
+
+## 4. Open The Terminal
+
+In browser-based VS Code, open a terminal:
 
 ```text
-Add python.exe to PATH
+Terminal > New Terminal
 ```
 
-Then continue with the default installation.
+The terminal should open at the repository root. The repository root is the folder that contains `requirements.txt`.
 
-After installation, close and reopen PowerShell.
-
-Check Python is available:
-
-```powershell
-python --version
-```
-
-If that does not work, try:
-
-```powershell
-py --version
-```
-
-### macOS
-
-macOS may already include a system Python, but it may be too old for this workshop. Install a current Python from:
-
-https://www.python.org/downloads/macos/
-
-After installation, close and reopen Terminal.
-
-Check Python is available:
-
-```bash
-python3 --version
-```
-
-Some Macs will not have a `python` command. That is okay. Use `python3` for the setup commands if `python` does not work.
-
-## 2. Install VS Code
-
-Install Visual Studio Code from:
-
-https://code.visualstudio.com/
-
-After installing VS Code, open it once so it can finish its first-run setup.
-
-## 3. Install Git
-
-Git is the tool we will use to download the workshop repository from GitHub.
-
-Check whether Git is already installed:
-
-```bash
-git --version
-```
-
-If Git is installed, the command prints a version number.
-
-If Git is not installed, install it from:
-
-https://git-scm.com/downloads
-
-### Windows
-
-Use the Git for Windows installer:
-
-https://git-scm.com/download/win
-
-The default installer options are fine for this workshop.
-
-After installation, close and reopen PowerShell, then check:
-
-```powershell
-git --version
-```
-
-### macOS
-
-Run:
-
-```bash
-git --version
-```
-
-If macOS asks you to install command line developer tools, accept the prompt and let the installation finish.
-
-You can also install Git from:
-
-https://git-scm.com/download/mac
-
-After installation, close and reopen Terminal, then check:
-
-```bash
-git --version
-```
-
-## 4. Clone the Workshop Repository
-
-Choose a place on your laptop where you keep code projects. For example, you might create a `workshops` folder.
-
-In Terminal or PowerShell, move to that folder, then run:
-
-```bash
-git clone https://github.com/aehrc/ai_workshop.git
-```
-
-Move into the repository:
-
-```bash
-cd ai_workshop
-```
-
-You should now be in the folder that contains `requirements.txt`.
-
-## 5. Install VS Code Extensions
-
-Open VS Code, then install these extensions:
-
-- Python: https://marketplace.visualstudio.com/items?itemName=ms-python.python
-- Jupyter: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter
-
-You can install extensions from the Extensions panel in VS Code. Search for `Python` and `Jupyter`, then install the Microsoft extensions.
-
-## 6. Open the Repository
-
-Open the cloned `ai_workshop` folder in VS Code.
-
-If VS Code asks whether you trust the authors of the files in this folder, choose to trust the workspace.
-
-Open the integrated terminal in VS Code:
-
-- macOS: `Terminal > New Terminal`
-- Windows: `Terminal > New Terminal`
-
-Run the remaining commands from the repository root. The repository root is the folder that contains `requirements.txt`.
-
-## 7. Create a Virtual Environment
-
-From the repository root, run:
-
-```bash
-python -m venv .venv
-```
-
-If `python` does not work on macOS, run:
-
-```bash
-python3 -m venv .venv
-```
-
-If `python` does not work on Windows, run:
-
-```powershell
-py -m venv .venv
-```
-
-On macOS or Linux:
-
-```bash
-source .venv/bin/activate
-```
-
-On Windows PowerShell:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-After activation, your terminal prompt should usually include `.venv`.
-
-## 8. Select the VS Code Python Interpreter
-
-In VS Code:
-
-1. Open the Command Palette:
-   - macOS: `Cmd+Shift+P`
-   - Windows: `Ctrl+Shift+P`
-2. Search for `Python: Select Interpreter`.
-3. Choose the interpreter inside `.venv`.
-
-It will usually look like one of these:
-
-```text
-.venv/bin/python
-.venv\Scripts\python.exe
-```
-
-## 9. Install Packages
-
-With the virtual environment active, run:
-
-```bash
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-```
-
-If you used `python3` or `py` to create the virtual environment, activate `.venv` first, then try the same `python -m pip ...` commands. Inside an active virtual environment, `python` should usually work.
-
-This may take several minutes.
-
-## 10. Check the Environment
+## 5. Check The Environment
 
 Run:
 
@@ -232,11 +54,11 @@ Run:
 python 01-setup/check_environment.py
 ```
 
-Expected result: the script prints your Python version, virtual environment status, key package availability, and the best PyTorch device available on your machine.
+Expected result: the script prints your Python version, confirms Codespaces, checks that the workshop packages are available, and reports the PyTorch device.
 
-CPU is acceptable.
+CPU is expected for the core workshop path.
 
-## 11. Run a Python Script
+## 6. Run A Python Script
 
 Run:
 
@@ -246,7 +68,7 @@ python 01-setup/hello_torch.py
 
 Expected result: the script creates a tensor, runs a small calculation, and prints the device PyTorch is using.
 
-## 12. Run a Notebook in VS Code
+## 7. Run A Notebook
 
 Open:
 
@@ -254,80 +76,58 @@ Open:
 01-setup/hello_notebook.ipynb
 ```
 
-Select the `.venv` kernel when VS Code asks. Run each cell from top to bottom.
+If VS Code asks for a notebook kernel, choose the Python environment from the Codespace container.
+
+Run each cell from top to bottom.
 
 Expected result: the notebook imports PyTorch and runs a small tensor calculation.
 
 ## Troubleshooting
 
-### Python command not found
+### Codespace Setup Is Still Running
 
-Try:
+If package imports fail immediately after the Codespace opens, wait for the setup command to finish. It installs the packages from `requirements.txt`.
 
-```bash
-python3 --version
-```
-
-On Windows, try:
-
-```powershell
-py --version
-```
-
-If none of these work, Python is not installed correctly or your terminal was opened before Python was installed. Close and reopen the terminal.
-
-### Git command not found
-
-Try closing and reopening the terminal first.
-
-If Git still does not work, install it from:
-
-https://git-scm.com/downloads
-
-Then check:
+You can rerun the install command manually if needed:
 
 ```bash
-git --version
+python -m pip install -r requirements.txt
 ```
 
-### Clone fails
+### Terminal Is In The Wrong Folder
 
-Check:
+Run:
 
-- the clone command was copied exactly
-- your internet connection is working
-- Git is installed and available in the terminal
-- the repository URL is `https://github.com/aehrc/ai_workshop.git`
+```bash
+pwd
+```
 
-### VS Code cannot find `.venv`
+The path should end with:
 
-Make sure:
+```text
+ai_workshop
+```
 
-- the virtual environment was created from the repository root
-- the `.venv` folder exists
-- you selected the interpreter using `Python: Select Interpreter`
+If not, run:
 
-### Package installation fails
+```bash
+cd /workspaces/ai_workshop
+```
 
-If package installation fails, check:
+### Notebook Kernel Is Missing
 
-- the virtual environment is active
-- Python is version 3.12
-- VS Code selected the `.venv` interpreter
-- your terminal is running from the repository root
+If VS Code asks for a notebook kernel, choose the Python environment from the Codespace container.
 
-### Notebook kernel is missing
-
-If VS Code asks for a notebook kernel, choose the `.venv` environment.
-
-If it does not appear:
+If it does not appear, run:
 
 ```bash
 python -m pip install ipykernel
 ```
 
-Then reload VS Code and try again.
+Then reload the browser tab and try again.
 
-### No GPU is detected
+### No GPU Is Detected
 
-If GPU acceleration is not available, continue with CPU. The core workshop path is designed for CPU.
+That is expected. The core workshop path is designed for CPU in Codespaces.
+
+The advanced vLLM session requires a separately arranged GPU-capable environment.

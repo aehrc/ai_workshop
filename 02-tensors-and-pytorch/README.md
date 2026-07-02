@@ -15,7 +15,7 @@ In this session, we will:
 
 - Create PyTorch tensors
 - Inspect tensor shapes and data types
-- Move tensors to the available device
+- Move tensors to the Codespaces CPU device
 - Perform basic tensor operations
 - Understand why tensor shape errors are common in machine learning code
 
@@ -55,7 +55,7 @@ This is designed to fit either a 45-60 minute session or a 15-25 minute "extra t
 
 1. Create tensors from Python lists.
 2. Inspect `.shape`, `.dtype`, and `.device`.
-3. Select CPU, CUDA, or MPS using `get_device()`.
+3. Select the Codespaces CPU device using `get_device()`.
 4. Run indexing, reshaping, matrix multiplication, and reductions.
 5. Interpret a tiny batch of tabular features.
 6. Complete the exercise file individually or in pairs.
@@ -80,7 +80,7 @@ Useful prompts:
 - Which dimension means examples?
 - Which dimension means input features?
 - Why does `x @ weights` work, but `weights @ x` fail?
-- What changes when the tensor moves from CPU to MPS or CUDA?
+- What changes when code explicitly moves a tensor to a device?
 
 ## Exercises
 
@@ -91,4 +91,4 @@ Exercises focus on:
 3. Reshaping flat values into a batch.
 4. Running matrix multiplication.
 5. Reducing across the right dimension.
-6. Moving tensors to the detected device.
+6. Moving tensors to the detected Codespaces device.
