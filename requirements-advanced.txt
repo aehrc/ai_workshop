@@ -1,7 +1,0 @@
-# Advanced lessons only.
-# vLLM is mainly intended for Linux/CUDA or cloud GPU environments.
-# Do not install this file during lesson 1 unless your instructor asks you to.
-vllm>=0.5
-peft>=0.11
-trl>=0.9
-bitsandbytes>=0.43

@@ -14,7 +14,7 @@ In this session, we aim to:
 
 Open:
 
-https://github.com/
+https://github.com/login
 
 Sign in with your GitHub account.
 

@@ -1,57 +1,36 @@
 # AI Workshop
 
-This repository is the home for a weekly, hands-on AI workshop. Sessions are designed for 1 hour each and assume a mix of experience levels.
+This repository is the home for a weekly, hands-on AI workshop, from Torch tensors to Large Language Models.
 
-The workshop runs in GitHub Codespaces only. Participants use browser-based VS Code with the repository, Python, Jupyter, and workshop packages prepared by the dev container.
+You can complete the workshop in GitHub Codespaces or locally using a VS Code dev container.
 
-The core lessons are designed to run on CPU in Codespaces. GPU access is not required until the advanced vLLM session, which needs a separately arranged GPU-capable environment.
+## Option 1: GitHub Codespaces
 
-## Start Here
+1. Sign in to GitHub and open this repository.
+2. Select **Code**, then **Codespaces**.
+3. Select **Create codespace on main** and wait for setup to finish.
 
-Before the workshop, make sure you can sign in to GitHub.
+See [Creating a codespace for a repository](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository) for more detail.
 
-1. Open this repository on GitHub.
-2. Select `Code`.
-3. Select the `Codespaces` tab.
-4. Select `Create codespace`.
-5. Wait for the setup command to finish installing Python packages.
-6. Open the Codespaces terminal.
-7. Run:
+## Option 2: Dev Containers and VS Code
 
-   ```bash
-   python 01-setup/check_environment.py
-   ```
+Choose this option if you want to participate on your local machine.
 
-Use [01 - Setup](01-setup/README.md) for the full first-session walkthrough.
+1. Install [Visual Studio Code](https://code.visualstudio.com/download).
+2. Install [Docker Desktop](https://docs.docker.com/desktop/) and start it.
+3. In VS Code, install the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+4. Clone this repository and open its folder in VS Code.
+5. Open the Command Palette (`F1`), run **Dev Containers: Reopen in Container**, and wait for setup to finish.
 
 ## Workshop Path
 
 | Session | Topic | Outcome |
 | --- | --- | --- |
-| 01 | [Setup](01-setup/README.md) | Create a Codespace, confirm the environment, and run a Python script and notebook in browser-based VS Code. |
+| 01 | [Setup](01-setup/README.md) | Start the development environment and run a Python script and notebook in VS Code. |
 | 02 | [Tensors and PyTorch](02-tensors-and-pytorch/README.md) | Create tensors, inspect shapes, and run basic PyTorch operations. |
-| 03 | [MLP MNIST Training Loop](03-mlp-mnist-training-loop/README.md) | Train a small neural network on MNIST using a PyTorch training loop in Codespaces. |
+| 03 | [MLP MNIST Training Loop](03-mlp-mnist-training-loop/README.md) | Train a small neural network on MNIST using a PyTorch training loop. |
 | 04 | [Training Loop Improvements](04-training-loop-improvements/README.md) | Add validation, metrics, checkpoints, and cleaner training structure. |
 | 05 | [Hugging Face Basics](05-hugging-face-basics/README.md) | Use tokenizers, datasets, pretrained models, and the model hub. |
-| 06 | [Generative Models](06-generative-models/README.md) | Run small pretrained generative models in Codespaces. |
+| 06 | [Generative Models](06-generative-models/README.md) | Run small pretrained generative models. |
 | 07 | [Fine-Tuning Generative Models](07-fine-tuning-generative-models/README.md) | Adapt a small generative model with a focused training loop. |
 | 08 | [Advanced vLLM Instruction Tuning](08-advanced-vllm-instruction-tuning/README.md) | Explore instruction-tuning and vLLM workflows for suitable GPU environments. |
-
-## Codespaces Expectations
-
-- A 4-core / 8 GB Codespace is recommended for the full workshop.
-- Smaller Codespaces may work for setup and tensor basics, but later sessions can be slower.
-- Standard Codespaces are CPU environments.
-- Advanced LLM training and vLLM require a separately arranged GPU-capable environment.
-
-## Repository Shape
-
-Each lesson is a top-level directory. Lessons may include:
-
-- `README.md` for the lesson plan and instructions
-- Python scripts for repeatable runs
-- notebooks for exploration
-- `exercises/` for small incomplete coding tasks
-- `solutions/` for completed versions of those tasks
-
-The shared environment for the core sessions is defined in [requirements.txt](requirements.txt) and installed automatically when a Codespace is created. Advanced dependencies are separated in [requirements-advanced.txt](requirements-advanced.txt).
