@@ -32,4 +32,32 @@ Choose this option if you want to participate on your local machine. This assume
 
 | Session | Topic | Outcome |
 | --- | --- | --- |
-| 01 | [Setup](01-setup/README.md) | Start the development environment and run a Python script and notebook in VS Code. |
+| 01 | [Tensors and PyTorch](01-tensors-and-pytorch) | Introduction to tensors in PyTorch. The fundamental tool for passing information through a deep neural network. |
+
+## Learning Materials
+
+Python (code) resources:
+- https://futurecoder.io/course/#IntroducingTheShell - interactive way to learn.
+- https://www.youtube.com/watch?v=fWjsdhR3z3c - short video.
+- https://www.youtube.com/watch?v=K5KVEU3aaeQ - long video.
+
+High-level series on linear algebra (relevant for earlier lessons):
+https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
+
+High-level series on deep learning (relevant for earlier lessons):
+
+- https://www.youtube.com/watch?v=aircAruvnKk
+- https://www.youtube.com/watch?v=IHZwWFHWa-w
+- https://www.youtube.com/watch?v=Ilg3gGewQ5U
+- https://www.youtube.com/watch?v=tIeHLnjs5U8
+
+Free textbook on deep learning:
+- http://neuralnetworksanddeeplearning.com/chap1.html
+
+High-level series on large language models (relevant for later lessons):
+
+- https://www.youtube.com/watch?v=LPZh9BOjkQs
+- https://www.youtube.com/watch?v=wjZofJX0v4M
+- https://www.youtube.com/watch?v=eMlx5fFNoYc
+- https://www.youtube.com/watch?v=9-Jl0dxWQs8
+

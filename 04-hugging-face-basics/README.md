@@ -4,10 +4,7 @@
 
 Recommended preparation before this lesson:
 
-- https://www.youtube.com/watch?v=LPZh9BOjkQs
-- https://www.youtube.com/watch?v=wjZofJX0v4M
-- https://www.youtube.com/watch?v=eMlx5fFNoYc
-- https://www.youtube.com/watch?v=9-Jl0dxWQs8
+
 
 ## Goal
 
