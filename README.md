@@ -32,6 +32,7 @@ Choose this option if you want to participate on your local machine. This assume
 
 | Session | Topic | Outcome |
 | --- | --- | --- |
+| 00 | [Python Refresher](00-python-refresher) | Basic Python refresher. This will be updated as the lessons go on. |
 | 01 | [Tensors and PyTorch](01-tensors-and-pytorch) | Introduction to tensors in PyTorch. The fundamental tool for passing information through a deep neural network. |
 
 ## Learning Materials
