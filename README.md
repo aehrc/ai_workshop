@@ -34,6 +34,7 @@ Choose this option if you want to participate on your local machine. This assume
 | --- | --- | --- |
 | 00 | [Python Refresher](00-python-refresher) | Basic Python refresher. This will be updated as the lessons go on. |
 | 01 | [Tensors and PyTorch](01-tensors-and-pytorch) | Introduction to tensors in PyTorch. The fundamental tool for passing information through a deep neural network. |
+| 02 | [Autograd, Training, and Data Pipeline](02-mnist-example) | Learning about torch data pipelines, automatic gradient descent for training, and training a deep neural network on a real example |
 
 ## Learning Materials
 
